@@ -47,7 +47,7 @@
 
 <body data-url="{{ .RelPermalink }}">
   <div class="docs-layout">
-
+    
     <header class="docs-header">
       {{- partial "topbar.html" . }}
     </header>
@@ -56,11 +56,13 @@
         SIDEBAR
        -->
 
-    <div id="search-wrapper">
-    </div>
+    <div class="grid-sidebar">
+      <div id="search-wrapper">
+      </div>
 
-    <div class="docs-drawer">
-      {{- partial "sidebar.html" . }}
+      <div class="docs-drawer">
+        {{- partial "sidebar.html" . }}
+      </div>
     </div>
 
 
@@ -83,8 +85,6 @@
       </nav>
     </div>
 
-
-    <div class="docs-footer-padding"></div>
     <footer class="docs-footer">
       {{- partial "footer.html" . }}
     </footer>

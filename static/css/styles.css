@@ -1,5 +1,4 @@
 /* 
-
   
   | header                      |
   |-----------------------------|
@@ -32,7 +31,8 @@ h2 {
 .docs-layout {
   /* height: 100%; */
   display: grid;
-
+  grid-template-columns: 300px 1fr 330px;
+  grid-template-rows: 100px 1fr 1fr;
 }
 
 .docs-main {
@@ -56,6 +56,9 @@ h2 {
   box-shadow: none !important;
   background-color: rgb(44, 43, 45) !important;
   z-index: 100;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row: 1;
 }
 
 @media screen and (max-width: 1025px) {
@@ -192,11 +195,7 @@ h2 {
 @media screen and (max-width: 1025px) {
 
   .docs-footer {
-    display: none;
-  }
-
-  .docs-footer-padding {
-    display: none;
+    /* display: none; */
   }
 
 }
@@ -492,13 +491,19 @@ h2 {
 
 */
 
+.grid-sidebar {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
 
 .docs-drawer {
   border: none;
   width: 300px;
-  position: fixed;
+  /* position: fixed; */
   z-index: 2000;
-  top: 100px;
+  /* top: 100px; */
   bottom: 0;
   overflow-y: hidden !important;
   display: flex;
@@ -697,10 +702,13 @@ hr.margin {
   padding-right: 30px;
   padding-bottom: 40px;
   /* left offset for sidebar */
-  margin-left: 300px;
+  /* margin-left: 300px; */
   /* this needs to be the 300px for the sidebar - 120px padding - 250px scrollspy */
-  width: calc(100% - 690px);
+  /* width: calc(100% - 690px); */
   max-width: 1000px;
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 2;
 }
 
 @media screen and (max-width: 1025px) {
@@ -1236,14 +1244,16 @@ hr.margin {
 */
 
 #scrollspy-container {
-  min-width: 330px;
-  max-width: 330px;
+  /* min-width: 330px;
+  max-width: 330px; */
   height: calc(100% - 113px);
   max-height: calc(100% - 113px);
-  position: fixed;
+  /* position: fixed; */
   overflow-y: auto;
-  top: 113px;
-  right: 0px;
+  /* top: 113px; */
+  /* right: 0px; */
+  grid-row-start: 2;
+  grid-column-start: 3;
 }
 
 @media screen and (max-width: 1025px) {

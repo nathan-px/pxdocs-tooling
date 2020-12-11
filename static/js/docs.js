@@ -417,28 +417,28 @@ $(function () {
 
   */
 
-  var footerElem = $('.docs-footer')
-  var footerElemPadding = $('.docs-footer-padding')
+  // var footerElem = $('.docs-footer')
+  // var footerElemPadding = $('.docs-footer-padding')
 
-  function checkFooterPadding() {
+  // function checkFooterPadding() {
 
-    footerElem.css({
-      visibility: 'visible'
-    })
+  //   footerElem.css({
+  //     visibility: 'visible'
+  //   })
 
-    var footerOffset = footerElem.offset().top
-    var documentHeight = scrollWindow.height()
+  //   var footerOffset = footerElem.offset().top
+  //   var documentHeight = scrollWindow.height()
 
-    // give the foot a top-margin for short documents
-    if (footerOffset < documentHeight) {
-      var footerHeightOffset = documentHeight - footerOffset
-      footerElemPadding.css({
-        height: footerHeightOffset + 'px',
-      })
-    }
-  }
+  //   // give the foot a top-margin for short documents
+  //   if (footerOffset < documentHeight) {
+  //     var footerHeightOffset = documentHeight - footerOffset
+  //     footerElemPadding.css({
+  //       height: footerHeightOffset + 'px',
+  //     })
+  //   }
+  // }
 
-  checkFooterPadding()
+  // checkFooterPadding()
 
   /*
 
@@ -571,24 +571,24 @@ $(function () {
     sidebar scroll
 
   */
-  $(window).scroll(function () {
-    var headerHeight = $('.docs-header').height()
-    var windowHeight = $(document).height()
-    var scrolledVal = $(document).scrollTop().valueOf()
-    var calcDiff = headerHeight - scrolledVal
-    if (scrolledVal >= headerHeight) {
-      $('.docs-drawer, #search-hits').css('top', '0px')
-      if ($(window).width() < 580) {
-        $('#search-hits').css('top', '65px')
-      }
-    }
-    else {
-      $('.docs-drawer, #search-hits').css('top', calcDiff)
-      if ($(window).width() < 580) {
-        $('#search-hits').css('top', (calcDiff + 65))
-      }
-    }
-  })
+  // $(window).scroll(function () {
+  //   var headerHeight = $('.docs-header').height()
+  //   var windowHeight = $(document).height()
+  //   var scrolledVal = $(document).scrollTop().valueOf()
+  //   var calcDiff = headerHeight - scrolledVal
+  //   if (scrolledVal >= headerHeight) {
+  //     $('.docs-drawer, #search-hits').css('top', '0px')
+  //     if ($(window).width() < 580) {
+  //       $('#search-hits').css('top', '65px')
+  //     }
+  //   }
+  //   else {
+  //     $('.docs-drawer, #search-hits').css('top', calcDiff)
+  //     if ($(window).width() < 580) {
+  //       $('#search-hits').css('top', (calcDiff + 65))
+  //     }
+  //   }
+  // })
 
   /*
 
