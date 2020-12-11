@@ -32,7 +32,7 @@ h2 {
   /* height: 100%; */
   display: grid;
   grid-template-columns: 300px 1fr 330px;
-  grid-template-rows: 100px 1fr 1fr;
+  grid-template-rows: 100px 1fr 60px;
 }
 
 .docs-main {
@@ -181,21 +181,25 @@ h2 {
 */
 
 .docs-footer {
-  visibility: hidden;
-  position: relative;
+  /* visibility: hidden; */
+  /* position: sticky; */
   z-index: 5000 !important;
-  bottom: 0px;
+  /* bottom: 0px; */
   background-color: #262729;
   color: #ffffff;
   font-family: "Libre Franklin", sans-serif;
-  left: 300px;
-  width: calc(100% - 300px)
+  /* left: 300px; */
+  /* width: calc(100% - 300px); */
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  /* height: 100px; */
 }
 
 @media screen and (max-width: 1025px) {
 
   .docs-footer {
-    /* display: none; */
+    display: none;
   }
 
 }
@@ -495,13 +499,14 @@ h2 {
   grid-column-start: 1;
   grid-column-end: 1;
   grid-row-start: 2;
-  grid-row-end: 3;
+  grid-row-end: 4;
 }
 
 .docs-drawer {
   border: none;
   width: 300px;
-  /* position: fixed; */
+  position: sticky;
+  top: 0;
   z-index: 2000;
   /* top: 100px; */
   bottom: 0;
@@ -509,6 +514,7 @@ h2 {
   display: flex;
   flex-flow: column;
   transition: left .35s ease-in-out;
+  height: 100vh;
 }
 
 @media screen and (max-width: 1025px) {
