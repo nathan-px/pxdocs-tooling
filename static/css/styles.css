@@ -1,3 +1,21 @@
+/* 
+
+  
+  | header                      |
+  |-----------------------------|
+  | sidebar |   advisory bar    |
+  |         |-------------------|
+  |         |                   | 
+  |         |                   | 
+  |         |                   | 
+  |         |                   | 
+  |         |                   | 
+  |         |                   | 
+  |         |-------------------| 
+  |         | footer            |
+
+*/
+
 html, body {
   font-family: 'Roboto', 'Helvetica', sans-serif;
   height: 100%;
@@ -13,6 +31,8 @@ h2 {
 
 .docs-layout {
   /* height: 100%; */
+  display: grid;
+
 }
 
 .docs-main {
@@ -1155,21 +1175,46 @@ hr.margin {
 }
 
 .ais-search-box--input-holding {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    font: inherit;
-    background: #fff;
-    display: inline-block;
-    border: 1px solid #d4d8e3;
-    border-radius: 4px;
-    box-shadow: 0 1px 1px 0 rgba(85,95,110,.2);
-    transition: box-shadow .4s ease,background .4s ease;
-    padding: 10px 10px 10px 35px;
-    vertical-align: middle;
-    white-space: normal;
-    height: 46px;
-    width: 100%;
+  width: 100% !important;
+  -webkit-appearance: none;
+  -webkit-rtl-ordering: logical;
+  -webkit-user-select: text;
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: #fff;
+  background-image: url("../images/magnifierIcon.svg");
+  background-repeat: no-repeat;
+  background-origin: padding-box;
+  background-position-x: 15px;
+  background-position-y: 50%;
+  background-size: 20px;
+  border-color: rgb(212, 216, 227);
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 1px;
+  box-shadow: rgba(85, 95, 110, 0.2) 0px 1px 1px 0px;
+  box-sizing: border-box;
+  color: #000;
+  display: inline-block;
+  font-family: Roboto, Helvetica, sans-serif;
+  font-size: 14px;
+  height: 46px;
+  line-height: 20px;
+  margin: 0px;
+  padding-bottom: 10px;
+  padding-left: 35px;
+  padding-right: 10px;
+  padding-top: 10px;
+  text-align: start;
+  text-indent: 0px;
+  /* transition-delay: 0s, 0s;
+  transition-duration: 0.4s, 0.4s;
+  transition-property: box-shadow, background;
+  transition-timing-function: ease, ease; */
+  /* vertical-align: middle;
+  white-space: normal; */
+  writing-mode: horizontal-tb;
+  outline: none;
 }
 
 
@@ -1478,7 +1523,7 @@ h2,h3,h4,h5,h6 a {
 */
 
 .list-series {
-  display: grid;
+  /* display: grid; */
   list-style: none;
   grid-column-gap: 2%;
   grid-template-columns: repeat(3, minmax(30%, 1fr));
